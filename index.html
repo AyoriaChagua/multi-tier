@@ -1,174 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tier maker</title>
-    <style>
-        :root {
-            --color-s: #ff7f80;
-            --color-a: #ffc07f;
-            --color-b: #ffdf80;
-            --color-c: #fdff7f;
-            --color-d: #bfff7f;
-            --color-e: #7fff7f;
-        }
+    <title>Tier-maker</title>
+    <link rel="icon" type="image/svg+xml" href="https://cdn-1.webcatalog.io/catalog/tiermaker/tiermaker-icon-filled-256.png?v=1714776171487" />
 
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-        }
-
-        button {
-            background:  transparent;
-            border: none;
-            cursor: pointer;
-            color: #fff
-        }
-
-        body {
-            background-color: #111;
-            color: #fff;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            margin: 0 auto;
-            max-width: 500px;
-            padding-inline: 32px;
-            user-select: none;
-        }
-
-        #top-header {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding-block: 8px;
-            & img {
-                max-width: 90px;
-                height: auto;
-            }
-        }
-        .tier{
-            border: 1px solid #444;
-            display: flex;
-            flex-direction: column;
-            background: #1f1f1f;
-        }
-        .row {
-            display: flex;
-            flex-direction: row;
-            border-bottom: 1px solid #111;
-        }
-
-        .label {
-            cursor: pointer;
-            background:  var(--level, #09f);
-            color: #333;
-            font-weight: bold;
-            width: 50px;
-            height: 50px;
-
-            display: flex;
-            align-items: center ;
-            justify-content: center;
-
-            &span:focus {
-                outline: 1px solif #fff;
-            }
-        }
-        #selector {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 16px;
-            margin-top: 16px;
-        }
-        #selector-buttons {
-            display:flex;
-            gap: 8px;
-            justify-content: center;
-
-            & button, & label {
-                cursor: pointer;
-                transition: all .3s ease;
-                background: #222;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 24px;
-                height: 24px;
-                padding: 4px;
-                &:hover {
-                    scale: 1.1;
-                }
-            }
-
-            & svg {
-                width: 100%;
-                height: 100%;
-            }
-        }
-
-        #seletor-items {
-            border: 1px solid #666;
-            width: 100%;
-            height: 200px;
-            margin-bottom: 100px;
-            display: flex;
-        }
-    </style>
-    <script type="module">
-      
-    </script>
+    <link rel="stylesheet" href="index.css">
 </head>
-    <body>
-        <header id="top-header">
-            <img src="https://cdn-1.webcatalog.io/catalog/tiermaker/tiermaker-icon-filled-256.png?v=1714776171487" alt="tier-logo">
-        </header>
-        <section class="tier">
-            <div class="row">
-                <aside class="label" style="--level: var(--color-s)">
-                    <span contenteditable="true">S</span>
-                </aside>
-            </div>
-            <div class="row">
-                <aside class="label" style="--level: var(--color-a)">
-                    <span contenteditable="true">A</span>
-                </aside>
-            </div>
-            <div class="row">
-                <aside class="label" style="--level: var(--color-b)">
-                    <span contenteditable="true">B</span>
-                </aside>
-            </div>
-            <div class="row">
-                <aside class="label" style="--level: var(--color-c)">
-                    <span contenteditable="true">C</span>
-                </aside>
-            </div>
-            <div class="row">
-                <aside class="label" style="--level: var(--color-d)">
-                    <span contenteditable="true">D</span>
-                </aside>
-            </div>
-            <div class="row">
-                <aside class="label" style="--level: var(--color-e)">
-                    <span contenteditable="true">E</span>
-                </aside>
-            </div>
-        </section>
-        <footer id="selector">
-            <section id="selector-buttons">
-                <label>
-                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-plus"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /><path d="M9 12h6" /><path d="M12 9v6" /></svg>
-                    <input type="file" id="image-input" hidden>
-                </label>
-                <button>
-                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-rotate"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19.95 11a8 8 0 1 0 -.5 4m.5 5v-5h-5" /></svg>
-                </button>
-            </section>
-            <section id="seletor-items">
 
-            </section>
-        </footer>
-    </body>
+<body>
+    <header id="top-header">
+            <img src="/img/Group 2.png" alt="tier-logo">
+    </header>
+    <section class="tier">
+        <div class="row">
+            <aside class="label" style="--level: var(--color-s)">
+                <span contenteditable="true">S</span>
+            </aside>
+        </div>
+        <div class="row">
+            <aside class="label" style="--level: var(--color-a)">
+                <span contenteditable="true">A</span>
+            </aside>
+        </div>
+        <div class="row">
+            <aside class="label" style="--level: var(--color-b)">
+                <span contenteditable="true">B</span>
+            </aside>
+        </div>
+        <div class="row">
+            <aside class="label" style="--level: var(--color-c)">
+                <span contenteditable="true">C</span>
+            </aside>
+        </div>
+        <div class="row">
+            <aside class="label" style="--level: var(--color-d)">
+                <span contenteditable="true">D</span>
+            </aside>
+        </div>
+        <div class="row">
+            <aside class="label" style="--level: var(--color-e)">
+                <span contenteditable="true">E</span>
+            </aside>
+        </div>
+    </section>
+    <footer id="selector">
+        <section id="selector-buttons">
+            <label>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-circle-plus">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                    <path d="M9 12h6" />
+                    <path d="M12 9v6" />
+                </svg>
+                <input multiple accept="image/*" type="file" id="image-input" hidden>
+            </label>
+            <button id="reset-tier-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-rotate">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M19.95 11a8 8 0 1 0 -.5 4m.5 5v-5h-5" />
+                </svg>
+            </button>
+            <button id="save-tier">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-download">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                    <path d="M7 11l5 5l5 -5" />
+                    <path d="M12 4l0 12" />
+                </svg>
+            </button>
+        </section>
+        <section id="seletor-items"></section>
+    </footer>
+</body>
+<script src="index.js"></script>
+
 </html>
